@@ -43,16 +43,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-        /**animacion3.setOnClickListener{
+        Animacion3.setOnClickListener{
             tareaSegundoPlano3()
         }
-        **/
+
         // Listener del boton Domotta que me 'abre' la Main2Activity con el menu inferior
-        /**val intento : Intent = Intent(this,Main2Activity::class.java)
-        domotta.setOnClickListener{
-            toast("Soy Domotta")
+        val intento : Intent = Intent(this,Main2Activity::class.java)
+        domotta2.setOnClickListener{
+            toast("Esto funciona")
             startActivity(intento)
-        }*/
+        }
     }
 
     /**
@@ -142,9 +142,11 @@ class MainActivity : AppCompatActivity() {
     }
     private fun tareaSegundoPlano3() = launch(uiContext) {
 
-        //No lo uso
+
         // tarea child en el contexto de este hilo/thread
         // contador de 30 hacia 1
+
+
         val task2 = async(bgContext) {
             for (i in 30 downTo 1) { // countdown from 10 to 1
                 //texto2.text = "Countdown $i ..." // update text
@@ -164,11 +166,11 @@ class MainActivity : AppCompatActivity() {
         // animamos a domotta, main task in UI
         val objectAnimator = ObjectAnimator.ofFloat(
                 domotta2,
-                "translationY",
-                300f*j)
+                "rotation",
+                360f,-360f
+        )
         objectAnimator.duration = 3000L
-        objectAnimator.startDelay
-        objectAnimator.interpolator
+
         objectAnimator.start()
 
         /**for (i in 10 downTo 1) { // countdown from 10 to 1
