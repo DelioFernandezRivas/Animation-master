@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         // Listener del boton Domotta que me 'abre' la Main2Activity con el menu inferior
         val intento : Intent = Intent(this,Main2Activity::class.java)
-        domotta2.setOnClickListener{
+        reloj.setOnClickListener{
             toast("Esto funciona")
             startActivity(intento)
         }
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         j *= -1
         // animamos a domotta, main task in UI
         val objectAnimator = ObjectAnimator.ofFloat(
-                domotta2,
+                reloj,
                 "translationX",
                 300f*j)
         objectAnimator.duration = 3000L
@@ -122,7 +122,7 @@ class MainActivity : AppCompatActivity() {
         j *= -1
         // animamos a domotta, main task in UI
         val objectAnimator = ObjectAnimator.ofFloat(
-                domotta2,
+                reloj,
                 "translationY",
                 300f*j)
         objectAnimator.duration = 3000L
@@ -165,7 +165,7 @@ class MainActivity : AppCompatActivity() {
         j *= -1
         // animamos a domotta, main task in UI
         val objectAnimator = ObjectAnimator.ofFloat(
-                domotta2,
+                reloj,
                 "rotation",
                 360f,-360f
         )
