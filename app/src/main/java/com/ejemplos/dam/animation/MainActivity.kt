@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         j *= -1
         // animamos a domotta, main task in UI
         val objectAnimator = ObjectAnimator.ofFloat(
-                domotta,
+                domotta2,
                 "translationX",
                 300f*j)
         objectAnimator.duration = 3000L
@@ -122,7 +122,7 @@ class MainActivity : AppCompatActivity() {
         j *= -1
         // animamos a domotta, main task in UI
         val objectAnimator = ObjectAnimator.ofFloat(
-                domotta,
+                domotta2,
                 "translationY",
                 300f*j)
         objectAnimator.duration = 3000L
@@ -163,7 +163,7 @@ class MainActivity : AppCompatActivity() {
         j *= -1
         // animamos a domotta, main task in UI
         val objectAnimator = ObjectAnimator.ofFloat(
-                domotta,
+                domotta2,
                 "translationY",
                 300f*j)
         objectAnimator.duration = 3000L
